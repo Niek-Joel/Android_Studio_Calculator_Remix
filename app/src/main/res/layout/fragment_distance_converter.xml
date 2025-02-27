@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DistanceConverterFragment" >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerTextGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/milesGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kilometersGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <Button
+        android:id="@+id/convertDistanceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kilometersGuide" />
+
+    <TextView
+        android:id="@+id/milesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/miles"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/milesGuide"
+        app:layout_constraintEnd_toStartOf="@+id/centerTextGuide" />
+
+    <TextView
+        android:id="@+id/kilometersView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/kilometers"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/kilometersGuide"
+        app:layout_constraintEnd_toStartOf="@+id/centerTextGuide" />
+
+    <EditText
+        android:id="@+id/milesEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoText="false"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:minHeight="48dp"
+        android:text="@string/empty"
+        app:layout_constraintBottom_toTopOf="@+id/milesGuide"
+        app:layout_constraintStart_toStartOf="@+id/centerTextGuide"
+        tools:ignore="Autofill,Deprecated,LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/kilometersEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:minHeight="48dp"
+        android:text="@string/empty"
+        app:layout_constraintBottom_toTopOf="@+id/kilometersGuide"
+        app:layout_constraintStart_toStartOf="@+id/centerTextGuide"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

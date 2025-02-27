@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tempMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TempConverterFragment" >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fahrenAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/celsiusAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <TextView
+        android:id="@+id/fahrenView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/fahrenheit"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fahrenAlign"
+        app:layout_constraintEnd_toStartOf="@+id/centerText" />
+
+    <TextView
+        android:id="@+id/celsiusView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/Celsius"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/celsiusAlign"
+        app:layout_constraintEnd_toStartOf="@+id/centerText" />
+
+    <Button
+        android:id="@+id/convertTempButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/celsiusAlign"
+        tools:ignore="UsingOnClickInXml" />
+
+    <EditText
+        android:id="@+id/fahrenEdit"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:minHeight="48dp"
+        android:text="@string/empty"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fahrenView"
+        app:layout_constraintBottom_toTopOf="@+id/fahrenAlign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/centerText"
+        tools:ignore="Autofill,LabelFor,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/celsiusEdit"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:minHeight="48dp"
+        android:text="@string/empty"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/celsiusView"
+        app:layout_constraintBottom_toTopOf="@+id/celsiusAlign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/centerText"
+        tools:ignore="Autofill,LabelFor,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
