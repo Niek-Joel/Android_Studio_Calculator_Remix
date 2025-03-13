@@ -38,10 +38,13 @@ public class TabLayoutContainer extends Fragment {
             switch (position) {
                 case 0:
                     tab.setText(TempConverterFragment.TAB_TITLE);
+                    break;
                 case 1:
                     tab.setText(TipCalculatorFragment.TAB_TITLE);
+                    break;
                 case 2:
                     tab.setText(DistanceConverterFragment.TAB_TITLE);
+                    break;
             }
         }).attach();
     }

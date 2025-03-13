@@ -20,7 +20,7 @@ public class DistanceConverterFragment extends Fragment {
     private String milesText, kilometersText;
     private FragmentDistanceConverterBinding binding;
 
-    public static final String TAB_TITLE = "Convert Dist";
+    public static final String TAB_TITLE = "Convert Distance";
     public static final String ARG_ID = "distID";
 
 

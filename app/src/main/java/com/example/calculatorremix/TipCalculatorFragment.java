@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class TipCalculatorFragment extends Fragment {
 
-    public static final String TAB_TITLE = "Calc Tip";
+    public static final String TAB_TITLE = "Calculate Tip";
     public static final String ARG_ID = "tipID";
     private FragmentTipCalculatorBinding binding;
 

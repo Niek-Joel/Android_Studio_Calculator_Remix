@@ -25,15 +25,16 @@ public class TabLayoutAdapter extends FragmentStateAdapter {
                 break;
             case 1:
                 fragment = new TipCalculatorFragment();
-                args.putInt(TempConverterFragment.ARG_ID, 0);
+                args.putInt(TipCalculatorFragment.ARG_ID, 1);
                 break;
             case 2:
                 fragment = new DistanceConverterFragment();
-                args.putInt(TempConverterFragment.ARG_ID, 0);
+                args.putInt(DistanceConverterFragment.ARG_ID, 2);
                 break;
             default:
                 throw new IllegalArgumentException("Invalid position. Value must be from 0 to " + (NUM_TABS - 1) + " (counting from 0). Given position = " + position);
         }
+        fragment.setArguments(args);
         return fragment;
     }
 
